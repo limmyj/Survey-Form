@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1 id="title">Survey Form</h1>
+    <p id="description">Thank you for taking the time to fil in the survey form</p>
+    <form id="survey-form">
+      <fieldset>
+        <label id="name-label">Name <input id="name" name="name" type="text" placeholder="Enter your name" required /></label>
+        <label id="email-label">Email <input id="email" name="email" type="email" placeholder="Enter your Email" required /></label>
+        <label id="number-label">Age (Optional) <input id="number" name="number" type="number" pattern="[0-100]" min="13" max="100" placeholder="Age" required /></label>
+        <label for="referrer">Which option best describes your current role?
+          <select id="dropdown" name="survey-form">
+            <option value="">Select current role</option>
+            <option value="1">Student</option>
+            <option value="2">Full Time Job</option>
+            <option value="3">Prefer not to say</option>
+            <option value="4">Other</option>
+          </select>
+        </label>
+        <label>Would you recommend restaurant to a friend?</label>
+        <label for="recommend"><input id="recommend" type="radio" name="recommend" class="inline" value="Definitely" checked /> Definitely</label>
+        <label for="recommend"><input id="recommend" type="radio" name="recommend" class="inline" value="Maybe"/> Maybe</label>
+        <label>What would you like to see improved? (Check all that apply)</label>
+        <label for="suggest"><input id="suggest" type="checkbox" name="suggest" class="inline" value="main-dishes" checked /> Main Dishes</label>
+        <label for="suggest"><input id="suggest" type="checkbox" name="suggest" class="inline" value="snacks"/> Snacks</label>
+        <label for="suggest"><input id="suggest" type="checkbox" name="suggest" class="inline" value="desserts"/> Desserts</label>
+        <label for="suggest"><input id="suggest" type="checkbox" name="suggest" class="inline" value="drinks"/> Drinks</label>
+        <label for="comment">Any comments or suggestions?
+          <textarea id="comment" name="comment" rows="3" cols="30" placeholder="Enter your comment here..."></textarea>
+        </label>
+      </fieldset>
+      <input id="submit" type="submit" value="Submit" />
+    </form>
+  </body>
+</html>
